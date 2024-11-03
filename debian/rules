@@ -9,8 +9,7 @@ VERSION	:= $(shell dpkg-parsechangelog -S Version | sed 's/-.*//' | sed 's/+pris
 	dh $@ --parallel --with dkms
 
 override_dh_install:
-	dh_install dkms.conf Makefile README.md usr/src/helloworld-$(VERSION)
-	dh_install hello* usr/src/helloworld-$(VERSION)/src
+	dh_install dkms.conf Makefile README.md hello* usr/src/helloworld-$(VERSION)
 
 override_dh_dkms:
 	dh_dkms -V $(VERSION)
