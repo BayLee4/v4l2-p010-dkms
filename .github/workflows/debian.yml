@@ -2,9 +2,6 @@ name: Build Debian Package
 
 on: push
 
-env:
-  DEB_BUILD_OPTIONS: nocheck
-
 jobs:
   build-artifact:
     runs-on: ubuntu-latest
