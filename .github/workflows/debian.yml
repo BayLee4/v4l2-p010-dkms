@@ -1,9 +1,6 @@
 name: Build Debian Package
 
-on:
-  push:
-    tags:
-      - '*'
+on: push
 
 env:
   DEB_BUILD_OPTIONS: nocheck
@@ -11,6 +8,8 @@ env:
 jobs:
   build-artifact:
     runs-on: ubuntu-latest
+    container:
+     image: debian:bookworm
 
     steps:
       - uses: actions/checkout@master
