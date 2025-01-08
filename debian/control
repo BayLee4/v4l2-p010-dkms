@@ -1,13 +1,16 @@
-Source: helloworld-dkms
+Source: v4l2-p010-dkms
 Section: contrib/kernel
 Priority: optional
-Maintainer: Deokgyu Yang <secugyu@gmail.com>
+Maintainer: Nobody <nobody@nowhere.com>
+Package: v4l2-p010-dkms
 Build-Depends: debhelper (>=11~), dh-sequence-dkms
 Standards-Version: 4.6.2.1
-Homepage: https://github.com/awesometic/realtek-r8821cu-dkms
 
-Package: helloworld-dkms
+Package: v4l2-p010-dkms
 Architecture: any
 Multi-Arch: foreign
-Depends: dkms (>= 1.95), ${misc:Depends}
-Description: Hello World DKMS Debian Package
+Depends: dkms (>= 1.95), sed, build-essential, wget, tar, ${misc:Depends}
+Description: DKMS support for P010 HDR10 video format
+ This package provides integration with the DKMS infrastructure for automatically building out of tree kernel modules.
+ .
+ This package contains the source to be built with dkms.

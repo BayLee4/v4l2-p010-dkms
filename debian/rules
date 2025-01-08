@@ -9,14 +9,14 @@ VERSION	:= $(shell dpkg-parsechangelog -S Version | sed 's/-.*//' | sed 's/+pris
 	dh $@ --parallel --with dkms
 
 override_dh_install:
-	dh_install dkms.conf Makefile README.md hello* usr/src/helloworld-$(VERSION)
+	dh_install dkms.conf dkms-patchmodule.sh p10_dkms.patch rpi-source usr/src/v4l2-p010-$(VERSION)
 
 override_dh_dkms:
 	dh_dkms -V $(VERSION)
 
 override_dh_fixperms:
 	dh_fixperms
-	find debian/helloworld-dkms/usr/src -type f -exec chmod -x {} \;
+	find debian/v4l2-p010-dkms/usr/src -type f -exec chmod -x {} \;
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
