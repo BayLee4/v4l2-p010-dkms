@@ -7,7 +7,7 @@ env:
 
 jobs:
   build-artifact:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24-arm
     container:
      image: debian:bookworm
 
@@ -36,4 +36,4 @@ jobs:
         id: upload-release-asset
         uses: softprops/action-gh-release@v2
         with:
-          file: ./*.deb
+          files: ./*.deb
