@@ -2,7 +2,6 @@ Source: v4l2-p010-dkms
 Section: contrib/kernel
 Priority: optional
 Maintainer: Nobody <nobody@nowhere.com>
-Package: v4l2-p010-dkms
 Build-Depends: debhelper (>=11~), dh-sequence-dkms
 Standards-Version: 4.6.2.1
 
