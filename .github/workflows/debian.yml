@@ -21,7 +21,7 @@ jobs:
         run: sudo bash debian/install_pkg_build_deps.sh
 
       - name: Create Debian Package
-        run: dpkg-buildpackage --host-arch=amd64 -b -rfakeroot -us -uc
+        run: dpkg-buildpackage --host-arch=arm64 -b -rfakeroot -us -uc
 
       - name: Copy Debian Package to Artifact Directory
         run: cp ../*.deb .
