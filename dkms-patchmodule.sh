@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./rpi-source --download-only --skip-update --dest .
+./rpi-source --download-only --processor 4 --default-config --skip-update --dest .
 
 echo "Extracting original source"
 tar --wildcards --one-top-level=src --strip-components 1 -xf linux-*.tar.* linux-*/drivers/media/common linux-*/drivers/media/usb/uvc
