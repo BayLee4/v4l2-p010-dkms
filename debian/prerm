@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NAME=v4l2-p010-dkms
+NAME=v4l2-p010
 VERSION=1.0
 
 set -e
